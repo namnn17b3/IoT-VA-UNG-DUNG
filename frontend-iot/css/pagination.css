@@ -1,0 +1,57 @@
+.phanTrang ul{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    border-radius: 50px;
+    justify-content: center;
+}
+
+.phanTrang ul li{
+    color: #000;
+    list-style: none;
+    line-height: 45px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.phanTrang ul li.numb{
+    list-style: none;
+    height: 45px;
+    width: 45px;
+    margin: 0 3px;
+    line-height: 45px;
+    border-radius: 50%;
+    font-weight: 600;
+}
+
+.phanTrang ul li.dots{
+    font-size: 22px;
+    cursor: default;
+}
+
+.nutPaginate{
+    padding: 0 20px;
+    border-radius: 50px;
+    background-color: #24c078;
+}
+
+.phanTrang li.active {
+    color: #fff;
+    background-color: #24c078;
+}
+
+.soTrang {
+    display: flex;
+    flex-direction: row;
+    margin: 0 10px;
+}
+
+.phanTrang li.inactive:hover {
+    background-color: rgb(217, 216, 216);
+}

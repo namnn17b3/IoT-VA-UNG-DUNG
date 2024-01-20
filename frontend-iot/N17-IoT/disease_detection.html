@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://localhost:8080/action -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>N17-IoT | Predict</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/disease_detection.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/img/tree.ico">
+    <style>
+        #detect-disease-btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+        <!-- partial -->
+        <nav class="navbar-breadcrumb col-xl-12 col-12 d-flex flex-row p-0">
+            <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                <ul class="navbar-nav mr-lg-2">
+                    <li class="nav-item ml-0">
+                        <h4 class="mb-0">IoT và ứng dụng</h4>
+                    </li>
+                    <li class="nav-item">
+                        <div class="d-flex align-items-baseline">
+                            <p class="mb-0">Vườn thông minh</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-right">
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid page-body-wrapper">
+            <nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="all_data.html">
+                            Dữ liệu môi trường
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="disease_detection.html">
+                            Nhận diện bệnh
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="history_predict_disease.html">
+                            Lịch sử đoán bệnh
+                        </a>
+                    </li>
+                    <li class="nav-item fn-admin" style="display: none;">
+                        <a class="nav-link" href="./admin/manage_user.html">
+                            Quản lý người dùng
+						</a>
+					</li>
+                    <li class="nav-item fn-admin" style="display: none;">
+                        <a class="nav-link" href="./admin/manage_drive.html">
+                            Quản lý thiết bị
+						</a>
+					</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">
+                            Thông tin cá nhân
+                        </a>
+                    </li>
+                    <li class="nav-item" style="cursor: pointer;" id="logout-btn">
+                        <span class="nav-link" style="color: var(--red);">
+                            Đăng xuất
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+            <!-- partial -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <h4 class="h4-data" style="font-size: 32px; font-weight: 600;">Nhận diện bệnh</h4>
+
+                    <!-- add spacing between title and table -->
+                    <div class="sh20"></div>
+                    <div class="row width-70 card height-700 no-flex bg-white">
+                        <div class="sh50"></div>
+                        <div class="row-flexbox pl-5">
+                            <div class="column-flexbox">
+                                <label for="input-file" id="drop-area">
+                                    <form id="image-upload-form" style="display: none;">
+                                        <input type="file" id="input-file" accept="image/*">
+                                    </form>
+                                    <div class="column-flexbox">
+                                        <div class="upload-file ajax-upload-dragdrop column-flexbox">
+                                            <img src="/assets/img/upload_image.png" class="upload-file-icon">
+                                            <div class="upload-file-subtitle">Kéo thả ảnh vào đây</div>
+                                        </div>
+                                        <div class="choose-file">Chọn ảnh</div>
+                                    </div>
+                                </label>
+                                <div class="sh20"></div>
+                                <div>
+                                    Tên ảnh: <span id="image-name">None</span>
+                                </div>
+                                <div class="sh20"></div>
+                                <button type="button" id="detect-disease-btn" class="display-none">Nhận diện bệnh</button>
+                            </div>
+                            <div class="sw50"></div>
+                            <div class="column-flexbox">
+                                <div class="display-none label" id="label-tree-detect">Dự đoán cây:</div>
+                                <div class="display-none" id="tree-detect"></div>
+                                <div class="sh50"></div>
+                                <div class="label display-none" id="label-disease-detect">Dự đoán bệnh:</div>
+                                <div class="display-none" id="disease-detect"></div>
+                                <div class="sh50"></div>
+                                <div class="label display-none" id="label-treatment">Cách chữa bệnh:</div>
+                                <div class="display-none" id="treatment"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="/js/utils.js"></script>
+<script src="/js/authentication.js"></script>
+<script src="/js/menu.js" defer async></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/js/disease_detection.js" defer async></script>
+</html>

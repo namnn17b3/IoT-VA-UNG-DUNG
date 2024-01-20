@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stream video to server</title>
+    <style>
+        #video {
+            transform: rotateY(180deg);
+            -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+            -moz-transform:rotateY(180deg); /* Firefox */
+        }
+        #videoElement {
+            transform: scaleX(-1);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <video autoplay playsinline id="videoElement"></video>
+        <canvas id="canvas" width="400" height="300"></canvas>
+    </div>
+    <div class= 'video'>
+        <img id="photo" width="400" height="300">
+    </div>
+    <div>
+        <button id='start-stream'>START</button>
+        <button id='stop-stream'>STOP</button>
+    </div>
+    {% load static %}
+    <script src="{% static 'authen/index.js' %}"></script>
+</body>
+</html>

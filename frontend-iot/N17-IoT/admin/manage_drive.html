@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>N17-IoT | Dashboard</title>
+	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/switch.css">
+	<link rel="stylesheet" href="../../css/home.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="icon" type="image/x-icon" href="../../assets/img/tree.ico">
+</head>
+
+<body>
+	<div class="container-scroller">
+		<!-- partial:partials/_navbar.html -->
+		<!-- partial -->
+
+
+		<nav class="navbar-breadcrumb col-xl-12 col-12 d-flex flex-row p-0">
+			<div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+				<ul class="navbar-nav mr-lg-2">
+					<li class="nav-item ml-0">
+						<h4 class="mb-0">IoT và ứng dụng</h4>
+					</li>
+					<li class="nav-item">
+						<div class="d-flex align-items-baseline">
+							<p class="mb-0">Vườn thông minh</p>
+						</div>
+					</li>
+				</ul>
+				<ul class="navbar-nav navbar-nav-right">
+				</ul>
+			</div>
+		</nav>
+		
+		
+		<div class="container-fluid page-body-wrapper">
+			<nav class="sidebar sidebar-offcanvas" id="sidebar">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../home.html">
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../all_data.html">
+                            Dữ liệu môi trường
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../disease_detection.html">
+                            Nhận diện bệnh
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../history_predict_disease.html">
+                            Lịch sử đoán bệnh
+                        </a>
+                    </li>
+                    <li class="nav-item fn-admin" style="display: none;">
+                        <a class="nav-link" href="../admin/manage_user.html">
+                            Quản lý người dùng
+						</a>
+					</li>
+                    <li class="nav-item fn-admin" style="display: none;">
+                        <a class="nav-link" href="../admin/manage_drive.html">
+                            Quản lý thiết bị
+						</a>
+					</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../profile.html">
+                            Thông tin cá nhân
+                        </a>
+                    </li>
+                    <li class="nav-item" style="cursor: pointer;" id="logout-btn">
+                        <span class="nav-link" style="color: var(--red);">
+                            Đăng xuất
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+			<!-- partial -->
+			<div class="main-panel">
+				<div class="content-wrapper">
+                    <h4 class="h4-data" style="font-weight: 600; font-size: 36px;">Quản lý thiết bị</h4>
+					<div class="row mb-4" style="height: 100%; width: 100%;">
+                        <div style="display: flex; justify-content: space-evenly; width: 100%; margin: 85px auto auto auto;">
+							<div class="height-50pt text-center position-relative card" style="height: 400px; width: 326px; background-color: #fff;">
+								<p style="margin-top: 50px;">Đèn</p>
+								<div class="o-vuong" id="led-background-1" style="cursor: unset; background-color: #c2e207;">
+									<img src="../../assets/img/led.png" class="with-100" alt="">
+								</div>
+								<div class="height-50pt text-center position-relative">
+									<p style="margin-top: 50px;">Chế độ tự động</p>&nbsp;&nbsp;
+									<label class="switch">
+										<p style="margin-top: 10px;"></p>
+										<p style="margin-left: 10px;"></p>
+										<input type="checkbox" class="toggleButton">
+										<span class="slider"></span>
+									</label>
+								</div>
+							</div>
+							<div class="height-50pt text-center position-relative card" style="height: 400px; width: 326px; background-color: #fff;">
+								<p style="margin-top: 50px;">Máy bơm</p>
+								<div class="o-vuong" id="led-background-2" style="cursor: unset; background-color: #1d9ec5;">
+									<img src="../../assets/img/water_pump.png" class="with-100" alt="">
+								</div>
+								<div class="height-50pt text-center position-relative">
+									<p style="margin-top: 50px;">Chế độ tự động</p>&nbsp;&nbsp;
+									<label class="switch">
+										<p style="margin-top: 10px;"></p>
+										<p style="margin-left: 10px;"></p>
+										<input type="checkbox" class="toggleButton">
+										<span class="slider"></span>
+									</label>
+								</div>
+							</div>
+                            <div class="height-50pt text-center position-relative card" style="height: 400px; width: 326px; background-color: #fff;">
+								<p style="margin-top: 50px;">ESP32</p>
+								<div class="o-vuong" id="led-background-2" style="cursor: unset; background-color: #66e1f8;">
+									<img src="../../assets/img/main_board.png" class="with-100" alt="">
+								</div>
+								<div class="height-50pt text-center position-relative">
+									<p style="margin-top: 50px;">Chế độ bảo trì</p>&nbsp;&nbsp;
+									<label class="switch">
+										<p style="margin-top: 10px;"></p>
+										<p style="margin-left: 10px;"></p>
+										<input type="checkbox" class="toggleButton">
+										<span class="slider"></span>
+									</label>
+								</div>
+							</div>
+                        </div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+	<script src="/js/utils.js"></script>
+	<script src="/js/authentication.js"></script>
+	<script src="/js/menu.js" defer async></script>
+	<script src="/js/manage_drive.js" defer async></script>
+</body>
+
+</html>

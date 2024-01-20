@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+}
+
+.navbar-image {
+    background-image: url('../assets/img/nav.webp');
+    margin: 0 50px;
+    margin-top: 40px;
+    background-size: cover;
+    background-position: right center;
+    text-align: center;
+    padding: 200px 20px; /* Thêm khoảng trống bên trái và bên phải */
+    position: relative;
+}
+
+.centered-text {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 75px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.product-image {
+    max-width: 300px; /* Điều chỉnh kích thước hình ảnh theo nhu cầu */
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Đổi màu của thanh navbar thành đen đậm */
+    position: fixed;
+    top: 0;
+    left: 50px;
+    right: 50px;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
+
+.login-button, .language-switcher {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.login-button:hover, .language-switcher:hover {
+    text-decoration: underline;
+}
+
+.content {
+    padding: 20px;
+    color: #fff;
+}
+
+footer{
+	background-color:black;
+	color: white;
+    /*padding:1em;*/
+    /*text-align:center;*/
+}
+.footer{
+    background-color: black;
+	text-align: center;
+}
+.footer article{
+    width:33.33%;
+    float:left;
+    background-color:black;
+    /*padding:1em;*/
+	text-align: center;
+}
+.footer:after{
+    content:"";
+    clear:both;
+    display:table;
+}
+.scocialmedia ul{
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+.scocialmedia li{
+    display:inline-block;
+	position: relative;
+}
+
+
+.social-icons {
+    margin: 10px 0;
+}
+
+.social-icons img {
+    margin: 0 10px;
+}
+
+.contact-info {
+    margin: 10px 0;
+}
+
+
+.gioithieu{
+	text-align: center;
+    margin-left: 5vh;
+    margin-right: 5vh;
+}
+.gioithieu article{
+    width:50%;
+    float:left;
+    padding:1em;
+	text-align: center;
+}
+.gioithieu:after{
+    content:"";
+    clear:both;
+    display:table;
+}
+
+*{
+    box-sizing:border-box;
+}
+section{
+	text-align: center;
+}
+article{
+    width:33.33%;
+    float:left;
+    padding:1em;
+    text-align: center;
+}
+section:after{
+    content:"";
+    clear:both;
+    display:table;
+}
+
+
+
+.dropaccbtn {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  .dropacc {
+    position: relative;
+    display: inline-block;
+  }
+  .dropacc-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropacc-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: "Segoe UI", "DejaVu Sans", "Trebuchet MS", "sans-serif";
+  }
+  .dropacc-content a:hover {background-color: #f1f1f1}
+  .dropacc:hover .dropacc-content {
+    display: block;
+  }

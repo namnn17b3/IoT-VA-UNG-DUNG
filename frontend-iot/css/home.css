@@ -1,0 +1,26 @@
+/* body {
+    margin: 0 ;
+    padding: 0 ;
+    overflow: hidden;
+}
+
+.navbar {
+    background-image: url('../assets/img/nav.webp');
+    margin: 0 50px;
+    background-size: cover;
+    background-position: right center;
+    text-align: center;
+    padding: 200px 20px; /* Thêm khoảng trống bên trái và bên phải */
+    /* position: relative;
+}
+
+.centered-text {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 75px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+} */ 

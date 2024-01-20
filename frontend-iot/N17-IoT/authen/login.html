@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="../../css/login.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/img/tree.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>N17-IoT | Login</title>
+    <style>
+        body {
+            background-image: url('../../assets/img/login_background.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .eyes-password-visible {
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            cursor: pointer;
+        }
+        .eyes-password-unvisible {
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            cursor: pointer;
+            display: none;
+        }
+        input[type="password"]::-ms-reveal,
+        input[type="password"]::-ms-clear {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-reg-panel">
+        <div class="login-info-box">
+            <h2>Bạn đã có tài khoản?</h2>
+            <p>Vui lòng đăng nhập vào hệ thống!</p>
+            <label id="label-register" for="log-reg-show">Đăng nhập</label>
+            <input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
+        </div>
+                            
+        <div class="register-info-box">
+            <h2>Bạn chưa có tài khoản?</h2>
+            <p>Đăng kí ngay nào!</p>
+            <label id="label-login" for="log-login-show">Đăng kí</label>
+            <input type="radio" name="active-log-panel" id="log-login-show">
+        </div>
+                            
+        <div class="white-panel">
+            <div class="login-show">
+                <h2>ĐĂNG NHẬP</h2>
+                <input type="text" placeholder="Email" id="email" name="email">
+                <div style="position: relative;">
+                    <i class="fa-solid fa-eye eyes-password-visible"></i>
+                    <i class="fa-sharp fa-solid fa-eye-slash eyes-password-unvisible"></i>
+                    <input type="password" placeholder="Mật khẩu" id="password" name="password" class="password">
+                </div>
+                <input type="button" value="Đăng nhập" id="login-btn">
+                <a href="./missing_password.html">Quên mật khẩu?</a>
+            </div>
+            <div class="register-show">
+                <h2>ĐĂNG KÍ</h2>
+                <input type="text" placeholder="Email" name="email" id="register-email">
+                <input type="text" placeholder="Tên người dùng" name="username" id="register-username">
+                <input type="text" placeholder="Số điện thoại" name="phone" id="register-phone">
+                <div style="position: relative;">
+                    <i class="fa-solid fa-eye eyes-password-visible"></i>
+                    <i class="fa-sharp fa-solid fa-eye-slash eyes-password-unvisible"></i>
+                    <input type="password" placeholder="Mật khẩu" name="password" id="register-password" class="password">
+                </div>
+                <div style="position: relative;">
+                    <i class="fa-solid fa-eye eyes-password-visible"></i>
+                    <i class="fa-sharp fa-solid fa-eye-slash eyes-password-unvisible"></i>
+                    <input type="password" placeholder="Nhập lại mật khẩu" name="confirm-password" id="register-confirm-password" class="password">
+                </div>
+                <input type="button" value="Đăng kí" id="register-btn">
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.login-info-box').fadeOut();
+            $('.login-show').addClass('show-log-panel');
+        });
+        
+        $('.login-reg-panel input[type="radio"]').on('change', function() {
+            if($('#log-login-show').is(':checked')) {
+                $('.register-info-box').fadeOut(); 
+                $('.login-info-box').fadeIn();
+                
+                $('.white-panel').addClass('right-log');
+                $('.register-show').addClass('show-log-panel');
+                $('.login-show').removeClass('show-log-panel');
+                
+            }
+            else if($('#log-reg-show').is(':checked')) {
+                $('.register-info-box').fadeIn();
+                $('.login-info-box').fadeOut();
+                
+                $('.white-panel').removeClass('right-log');
+                
+                $('.login-show').addClass('show-log-panel');
+                $('.register-show').removeClass('show-log-panel');
+            }
+        });
+    </script>
+    <script src="../../js/utils.js"></script>
+    <script src="/js/page_before_login.js"></script>
+    <script src="../../js/login.js"></script>
+</body>
+</html>

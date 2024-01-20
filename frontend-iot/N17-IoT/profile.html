@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>N17-IoT | Thông tin cá nhân</title>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/tree.ico">
+    <link rel="stylesheet" href="/assets/icons/fontawesome-free-6.3.0-web/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style>
+        #btn-change-pasword:hover, #btn-update-info:hover {
+            opacity: 0.8;
+        }
+
+		#email {
+			cursor: not-allowed;
+		}
+
+		input[type='text'] {
+			border: 1px solid;
+		}
+
+		#avatar-img {
+			object-fit: cover;
+		}
+    </style>
+</head>
+
+<body>
+	<div class="container-scroller">
+		<!-- partial:partials/_navbar.html -->
+		<!-- partial -->
+		<nav class="navbar-breadcrumb col-xl-12 col-12 d-flex flex-row p-0">
+			<div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+				<ul class="navbar-nav mr-lg-2">
+					<li class="nav-item ml-0">
+						<h4 class="mb-0">IoT và ứng dụng</h4>
+					</li>
+					<li class="nav-item">
+						<div class="d-flex align-items-baseline">
+							<p class="mb-0">Vườn thông minh</p>
+						</div>
+					</li>
+				</ul>
+				<ul class="navbar-nav navbar-nav-right">
+				</ul>
+			</div>
+		</nav>
+		<div class="container-fluid page-body-wrapper">
+			<nav class="sidebar sidebar-offcanvas" id="sidebar">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="home.html">
+							Trang chủ
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="all_data.html">
+							Dữ liệu môi trường
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="disease_detection.html">
+							Nhận diện bệnh
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="history_predict_disease.html">
+							Lịch sử đoán bệnh
+						</a>
+					</li>
+					<li class="nav-item fn-admin">
+						<a class="nav-link" href="./admin/manage_user.html">
+							Quản lý người dùng
+						</a>
+					</li>
+					<li class="nav-item fn-admin" style="display: none;">
+						<a class="nav-link" href="./admin/manage_drive.html">
+							Quản lý thiết bị
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="profile.html">
+							Thông tin cá nhân
+						</a>
+					</li>
+					<li class="nav-item" style="cursor: pointer;" id="logout-btn">
+						<span class="nav-link" style="color: var(--red);">
+							Đăng xuất
+						</span>
+					</li>
+				</ul>
+			</nav>
+			<!-- partial -->
+			<div class="main-panel">
+				<div class="content-wrapper">
+					<div class="row width-70 card">
+						<div class="container emp-profile">
+							<form method="post">
+								<div class="row">
+									<div class="col-md-4">
+										<div class="profile-img">
+											<img class="avatar-img" id="avatar-user" src="/assets/img/user_avatar.png" alt="" />
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="profile-head">
+											<h5 class="username-title">Tên</h5>
+											<h6 class="role">Role</h6>
+											<ul class="nav nav-tabs" id="myTab" role="tablist">
+												<li class="nav-item">
+													<a class="nav-link active" id="home-tab" data-toggle="tab"
+														href="#home" role="tab" aria-controls="home"
+														aria-selected="true">About</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-md-2">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+										<div class="profile-work">
+											<div style="height: 20px;"></div>
+											<input type="file" id="file-input" style="display: none;">
+											<label for="file-input" id="change-avatar-btn">Đổi ảnh đại diện</label>
+											<div style="height: 8px;"></div>
+											<p style="font-size: 0.9rem; margin-top: 0;">Contact</p>
+											<div class="row-flexbox">
+												<a href="https://www.facebook.com/kinm472k2/"><i
+														class="fa-brands fa-facebook fa-2xl"
+														style="color: blue"></i></a>
+												<div style="width: 10px;"></div>
+												<a href="https://instagram.com/kin.m_47/"><i
+														class="fa-brands fa-instagram fa-2xl"
+														style="color: #d62976;"></i></a>
+											</div>
+											<div style="height: 20px;"></div>
+											<a href="#change-password-wapper" style="font-weight: 500; color: blue;">Đổi mật khẩu</a>
+										</div>
+									</div>
+									<div class="col-md-8">
+										<div class="tab-content profile-tab" id="myTabContent">
+											<div class="tab-pane fade show active" id="home" role="tabpanel"
+												aria-labelledby="home-tab">
+												<div class="row">
+													<div class="col-md-6">
+														<label>Email:</label>
+													</div>
+													<div class="col-md-6">
+														<input type="text" id="email" name="email" disabled/>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<label>Tên người dùng:</label>
+													</div>
+													<div class="col-md-6">
+														<input type="text" id="username-description" name="username-description"/>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<label>Số điện thoại:</label>
+													</div>
+													<div class="col-md-6">
+														<input type="text" id="phone" name="phone"/>
+													</div>
+												</div>
+												<!-- <div class="row">
+													<div class="col-md-6">
+														<label>Chuyên ngành:</label>
+													</div>
+													<div class="col-md-6">
+														<p class="phone">Công nghệ phần mềm</p>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<label>Nghề nghiệp:</label>
+													</div>
+													<div class="col-md-6">
+														<p class="phone">Kỹ sư IoT</p>
+													</div>
+												</div> -->
+											</div>
+										</div>
+										<div style="
+											display: flex; background-color: #24c078; width: 100px; height: 40px;
+											border-radius: 6px; cursor: pointer; margin-left: 0%; margin-top: 10px; color: #fff;"
+											id="btn-update-info">
+											<span style="font-weight: 700; margin: auto;">Cập nhật</span>
+										</div>
+									</div>
+
+								</div>
+							</form>
+						</div>
+					</div>
+					<div style="height: 200px"></div>
+					<div class="row width-70 card change-password-zone" id="change-password-wapper">
+						<h5>Đổi mật khẩu</h5>
+						<div style="height: 50px;"></div>
+						<div class="row">
+							<div class="col-md-2">
+								<label>Mật khẩu hiện tại:</label>
+							</div>
+							<div class="col-md-10">
+								<input type="password" name="current-password" placeholder="Nhập mật khẩu hiện tại"
+									class="password" id="current-password">
+								<i class="fa fa-eye togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+							</div>
+						</div>
+						<div style="height: 15px"></div>
+						<div class="row">
+							<div class="col-md-2">
+								<label>Mật khẩu mới:</label>
+							</div>
+							<div class="col-md-10">
+								<input type="password" placeholder="Nhập mật khẩu mới" name="new-password"
+									class="password" id="new-password">
+								<i class="fa fa-eye togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+							</div>
+						</div>
+						<div style="height: 15px"></div>
+						<div class="row">
+							<div class="col-md-2">
+								<label>Xác nhận mật khẩu:</label>
+							</div>
+							<div class="col-md-10">
+								<input type="password" placeholder="Nhập lại mật khẩu mới" name="confirm-password"
+									class="password" id="confirm-password">
+								<i class="fa fa-eye togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+							</div>
+						</div>
+                        <div style="
+                            display: flex; background-color: #24c078; width: 100px; height: 40px;
+                            border-radius: 6px; cursor: pointer; color: #fff;"
+                            id="btn-change-pasword">
+                            <span style="font-weight: 700; margin: auto;">Xác nhận</span>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="/js/utils.js" defer async></script>
+<script src="/js/authentication.js" defer async></script>
+<script src="/js/menu.js" defer async></script>
+<script src="/js/profile.js" defer async></script>
+
+</html>
