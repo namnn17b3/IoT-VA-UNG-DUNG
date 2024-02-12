@@ -1,6 +1,7 @@
-const port = 8000;
-const domain = '192.168.1.144';
-const prefixUrl = `http://${domain}:${port}/`;
+const port = location.port;
+const domain = document.domain;
+const http = window.location.href.includes('https') ? 'https' : 'http';
+const prefixUrl = `${http}://${domain}:${port}/`;
 
 function redirect(url) {
     console.log(url);
@@ -24,6 +25,12 @@ function callAPI(url, method,  data=null, handler) {
 
     xhr.open(method, apiUrl, true);
     xhr.setRequestHeader("Authorization", `Bearer ${accessToken}`);
+    if (data instanceof FormData) {
+        console.log(data.get('jsonData'));
+    }
+    else {
+        xhr.setRequestHeader("Content-Type", "*/*");
+    }
     xhr.send(data);
 }
 
